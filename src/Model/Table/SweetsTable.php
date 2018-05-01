@@ -33,6 +33,14 @@ class SweetsTable extends Table
         $this->table('sweets');
         $this->displayField('id');
         $this->primaryKey('id');
+        $this->addBehavior('Josegonzalez/Upload.Upload', [
+            'photo' => [
+                'path' => 'static{DS}{model}{DS}{field}{DS}',
+                'nameCallback' => function ($data, $settings) {
+                    return uniqid().'-'.strtolower($data['name']);
+                }
+            ],
+        ]);
     }
 
     /**

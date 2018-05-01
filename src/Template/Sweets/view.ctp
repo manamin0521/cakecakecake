@@ -31,5 +31,6 @@
     <div class="row">
         <h4><?= __('image') ?></h4>
         <?= $this->Text->autoParagraph(h($sweet->image)); ?>
+        <?= $this->HTML->image(h($sweet->image)); ?>
     </div>
 </div>
