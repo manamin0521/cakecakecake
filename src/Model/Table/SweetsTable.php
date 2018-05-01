@@ -31,8 +31,8 @@ class SweetsTable extends Table
         parent::initialize($config);
 
         $this->table('sweets');
-        $this->displayField('ID');
-        $this->primaryKey('ID');
+        $this->displayField('id');
+        $this->primaryKey('id');
     }
 
     /**
@@ -44,17 +44,20 @@ class SweetsTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('ID')
-            ->allowEmpty('ID', 'create');
+            ->integer('id')
+            ->allowEmpty('id', 'create');
 
         $validator
-            ->allowEmpty('NAME');
+            ->allowEmpty('name');
 
         $validator
-            ->allowEmpty('BODY');
+            ->allowEmpty('body');
 
         $validator
-            ->allowEmpty('IMAGE');
+            ->allowEmpty('image');
+            
+        $validator
+            ->allowEmpty('dir');
 
         return $validator;
     }

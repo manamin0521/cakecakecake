@@ -14,20 +14,20 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <!--<th scope="col"><?= $this->Paginator->sort('ID') ?></th>-->
-                <!--<th scope="col"><?= $this->Paginator->sort('NAME') ?></th>-->
+                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
+                <!--<th scope="col"><?= $this->Paginator->sort('name') ?></th>-->
                 <!--<th scope="col" class="actions"><?= __('Actions') ?></th>-->
             </tr>
         </thead>
         <tbody>
             <?php foreach ($sweets as $sweet): ?>
             <tr>
-                <td><?= $this->Number->format($sweet->ID) ?></td>
-                <td><?= h($sweet->NAME) ?></td>
+                <td><?= $this->Number->format($sweet->id) ?></td>
+                <td><?= h($sweet->name) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $sweet->ID]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $sweet->ID]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $sweet->ID], ['confirm' => __('Are you sure you want to delete # {0}?', $sweet->ID)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $sweet->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $sweet->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $sweet->id], ['confirm' => __('Are you sure you want to delete # {0}?', $sweet->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

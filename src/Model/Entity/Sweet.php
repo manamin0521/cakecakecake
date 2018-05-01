@@ -6,10 +6,10 @@ use Cake\ORM\Entity;
 /**
  * Sweet Entity
  *
- * @property int $ID
- * @property string $NAME
- * @property string $BODY
- * @property string $IMAGE
+ * @property int $id
+ * @property string $name
+ * @property string $body
+ * @property string $image
  */
 class Sweet extends Entity
 {
@@ -25,6 +25,6 @@ class Sweet extends Entity
      */
     protected $_accessible = [
         '*' => true,
-        'ID' => false
+        'id' => false
     ];
 }

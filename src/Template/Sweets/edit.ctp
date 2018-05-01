@@ -8,8 +8,8 @@
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
                 __('Delete'),
-                ['action' => 'delete', $sweet->ID],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $sweet->ID)]
+                ['action' => 'delete', $sweet->id],
+                ['confirm' => __('Are you sure you want to delete # {0}?', $sweet->id)]
             )
         ?></li>
         <li><?= $this->Html->link(__('List Sweets'), ['action' => 'index']) ?></li>
@@ -20,9 +20,9 @@
     <fieldset>
         <legend><?= __('Edit Sweet') ?></legend>
         <?php
-            echo $this->Form->input('NAME');
-            echo $this->Form->input('BODY');
-            echo $this->Form->input('IMAGE');
+            echo $this->Form->input('name');
+            echo $this->Form->input('body');
+            echo $this->Form->input( 'image', array( 'type' => 'file' ));
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
