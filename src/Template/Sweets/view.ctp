@@ -13,24 +13,16 @@
     </ul>
 </nav>
 <div class="sweets view large-9 medium-8 columns content">
-    <h3><?= h($sweet->id) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('name') ?></th>
-            <td><?= h($sweet->name) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('id') ?></th>
-            <td><?= $this->Number->format($sweet->id) ?></td>
-        </tr>
-    </table>
+        <div class="row">
+            <h4><?= __('shop name') ?></h4>
+            <?= h($sweet->name) ?>
+        </div>
     <div class="row">
-        <h4><?= __('body') ?></h4>
+        <h4><?= __('place') ?></h4>
         <?= $this->Text->autoParagraph(h($sweet->body)); ?>
     </div>
     <div class="row">
         <h4><?= __('image') ?></h4>
-        <?= $this->Text->autoParagraph(h($sweet->image)); ?>
         <?= $this->HTML->image(h($sweet->image)); ?>
     </div>
 </div>

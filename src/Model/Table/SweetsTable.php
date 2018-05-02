@@ -63,9 +63,6 @@ class SweetsTable extends Table
 
         $validator
             ->allowEmpty('image');
-            
-        $validator
-            ->allowEmpty('dir');
 
         return $validator;
     }

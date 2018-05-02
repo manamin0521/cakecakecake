@@ -22,13 +22,12 @@
         <tbody>
             <?php foreach ($sweets as $sweet): ?>
             <tr>
-                <td><?= $this->Number->format($sweet->id) ?></td>
-                <td><?= h($sweet->name) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $sweet->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $sweet->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $sweet->id], ['confirm' => __('Are you sure you want to delete # {0}?', $sweet->id)]) ?>
-                </td>
+               <?= $this->Html->link(
+                             $this->HTML->image(h($sweet->image)),
+                             array('controller' => 'sweets', 'action' => 'view', $sweet->id),
+                             array('escape' => false)
+                             );
+                ?>
             </tr>
             <?php endforeach; ?>
         </tbody>
@@ -44,3 +43,9 @@
         <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
     </div>
 </div>
+<style>
+img {
+    width:200px;
+    height:200px;
+}
+</style>

@@ -20,9 +20,9 @@
     <fieldset>
         <legend><?= __('Edit Sweet') ?></legend>
         <?php
-            echo $this->Form->input('name');
-            echo $this->Form->input('body');
-            echo $this->Form->input( 'image', array( 'type' => 'file' ));
+            echo $this->Form->input('shop name');
+            echo $this->Form->input('place');
+            echo $this->Form->input( 'image');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
